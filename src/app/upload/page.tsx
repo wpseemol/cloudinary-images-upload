@@ -66,10 +66,10 @@ export default function UploadPage() {
                // - Cloudinary client-side upload
                const progressInterval = setInterval(() => {
                     setUploadProgress((prev) => {
-                         const newProgress = Math.min(prev + 10, 90); // Cap at 90% until complete
+                         const newProgress = Math.min(prev + 1, 100); // Cap at 90% until complete
                          return newProgress;
                     });
-               }, 300);
+               }, 1);
 
                // 4. Perform actual upload
                const response = await uploadOnCloudinary(formData);
