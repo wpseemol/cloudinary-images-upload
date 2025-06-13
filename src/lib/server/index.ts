@@ -33,6 +33,7 @@ export async function uploadOnCloudinary(formData: FormData) {
                          folder: "my_uploads", // Target folder in Cloudinary
                          public_id: `user-upload_${Date.now()}_${originalFilename}`, // Unique filename
                          resource_type: "auto", // Auto-detect file type
+                         quality_analysis: true,
                     },
                     (error, result) => {
                          if (error) {
